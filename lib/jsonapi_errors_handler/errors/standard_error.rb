@@ -13,7 +13,7 @@ module JsonapiErrorsHandler
       )
         @title = title || 'Something went wrong'
         @detail = detail || message
-        @detail ||= "We've encountered unexpected error, but our developers had been already notified about it" # rubocop:disable Metrics/LineLength
+        @detail ||= "An unexpected error was encountered"
         @status = status || 500
         @source = KeysStringifier.call(source)
       end

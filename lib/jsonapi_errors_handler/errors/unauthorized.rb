@@ -9,7 +9,7 @@ module JsonapiErrorsHandler
         super(
           title: 'Unauthorized',
           status: 401,
-          detail: message || 'You need to login to authorize this request.',
+          detail: message || 'The request lacks valid authentication credentials.',
           source: { pointer: '/request/headers/authorization' }
         )
       end

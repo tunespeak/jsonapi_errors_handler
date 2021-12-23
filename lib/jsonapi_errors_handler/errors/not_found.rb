@@ -9,7 +9,7 @@ module JsonapiErrorsHandler
         super(
           title: 'Record not Found',
           status: 404,
-          detail: message || 'We could not find the object you were looking for.',
+          detail: message || 'The server was unable to find what was requested',
           source: { pointer: '/request/url/:id' }
         )
       end

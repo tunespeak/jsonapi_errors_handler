@@ -9,7 +9,7 @@ module JsonapiErrorsHandler
         super(
           title: 'Forbidden request',
           status: 403,
-          detail: message || 'You have no rights to access this resource',
+          detail: message || 'The requested resource is forbidden',
           source: { pointer: '/request/headers/authorization' }
         )
       end
