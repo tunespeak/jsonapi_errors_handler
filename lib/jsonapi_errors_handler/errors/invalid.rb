@@ -13,10 +13,11 @@ module JsonapiErrorsHandler
 
       def serializable_hash
         errors.reduce([]) do |r, (att, msg)|
+          att = att.to_s
           r << {
             status: status,
             title: title,
-            detail: "#{att} #{msg}",
+            detail: (att == 'base') ? msg : "#{att.humanize} #{msg}",
             source: { pointer: "/data/attributes/#{att}" }
           }
         end
